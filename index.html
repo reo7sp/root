@@ -1,74 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>root.reo7sp.ru</title>
+    <title>olezh.es</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
     <style>
         body {
             font-family: sans-serif;
-            font-size: 18px;
-            background-color: #fff0e0;
+            font-size: 16px;
+            line-height: 26px;
+            background-color: #fed;
+            margin: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            margin-top: 39px;
+            margin-bottom: 13px;
+        }
+
+        p {
+            margin: 7px 0;
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        a {
+            color: #0060a0;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,96,160,.2);
+        }
+
+        a:hover {
+            color: #d04000;
+            border-bottom-color: rgba(208,64,0,.2);
+        }
+
+        .item {
+            font-size: 1.125em;
         }
 
         #container {
-            margin: 24px;
+            margin: 64px 24px;
+            margin-bottom: 130px;
         }
 
         @media (min-width: 640px) {
             #container {
                 position: absolute;
-                right: 15%;
-                top: 15%;
+                left: 55%;
+                width: 400px;
             }
-        }
-
-        @media (max-width: 640px) {
-            body {
-                text-align: right;
-            }
-            #container {
-                margin-top: 48px;
-            }
-        }
-
-        a {
-            color: #000;
         }
     </style>
+
+    <script>
+        window.addEventListener('mousemove', function (e) {
+            var x = Math.round(e.clientX / window.innerWidth * 360 - 60) % 360;
+            var y = ((e.clientY / window.innerHeight) * 0.5 + 0.25) * 100;
+            document.body.style.backgroundColor = 'hsl(' + x + ', ' + y + '%, 70%)';
+        });
+    </script>
 </head>
 
 <body>
 
     <div id="container">
-        <h1 style="margin-bottom: 1.25em">root.<a href="//oleg.rocks">reo7sp.ru</a></h1>
+        <h1>olezhe's</h1>
+
+        <h2>Кто я</h2>
         <p>
-            <a href="//oleg.rocks">resume</a>
+            <a class="item" href="//oleg.rocks">резюме</a>
+        </p>
+
+        <h2>Инфо</h2>
+        <p>
+            <a class="item" href="//instagram.com/reo7sp">инста</a> — фоточки.
         </p>
         <p>
-            <a href="//key.reo7sp.ru">key.</a>
+            <a class="item" href="//key.olezh.es">key.</a> — ссш-ключ.
+        </p>
+
+        <h2>Шеринг из керинг</h2>
+        <p>
+            <a class="item" href="//tells.olezh.es">tells.</a> — хорошие ссылки.
         </p>
         <p>
-            <a href="//drop.reo7sp.ru">drop.</a>
+            <a class="item" href="//writes.olezh.es">writes.</a> — учусь писать. эксперимент в прямом эфире.
         </p>
         <p>
-            <a href="//cheer.reo7sp.ru">cheer.</a>
+            <a class="item" href="//techment.olezh.es">techment.</a> — список факапов и не только. как руководить командой.
+        </p>
+
+        <h2>Сервисы</h2>
+        <p>
+            <a class="item" href="//drop.olezh.es">drop.</a> — скинуть длинную ссылку гугл презы на преподский комп.
         </p>
         <p>
-            <a href="//yourself.reo7sp.ru">yourself.</a>
+            <a class="item" href="//reo7sp.github.io/vk-channelify/">vk-channelify</a> — пересылать новости из вк группы в тг канал.
         </p>
         <p>
-            <a href="//jupyter.reo7sp.ru">jupyter.</a>
+            <a class="item" href="//jupyter.olezh.es">jupyter.</a>
         </p>
         <p>
-            proxy.
+            <span class="item">proxy.</span>
         </p>
         <p>
-            vpn.
+            <span class="item">vpn.</span>
+        </p>
+
+        <h2>Опенсорс</h2>
+        <p>
+            <a class="item" href="https://github.com/reo7sp/tgbot-cpp">tgbot-cpp</a> — библиотека для тг ботов на с++.
         </p>
         <p>
-            <a href="//reo7sp.github.io/vk-channelify/">vk-channelify</a>
+            <a class="item" href="https://github.com/ktsstudio/kts_linguistics">kts_linguistics</a> — умеет исправлять опечатки и обрабатывать текст.
         </p>
     </div>
 
