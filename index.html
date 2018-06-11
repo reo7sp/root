@@ -66,9 +66,9 @@
 
     <script>
         window.addEventListener('mousemove', function (e) {
-            var x = Math.round(e.clientX / window.innerWidth * 360 - 60) % 360;
-            var y = ((e.clientY / window.innerHeight) * 0.5 + 0.25) * 100;
-            document.body.style.backgroundColor = 'hsl(' + x + ', ' + y + '%, 70%)';
+            var x = e.clientX / window.innerWidth * 100;
+            var y = (e.clientY / window.innerHeight) * 360;
+            document.body.style.backgroundColor = 'hsl(' + y + ', ' + x + '%, 80%)';
         });
     </script>
 </head>
