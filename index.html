@@ -19,20 +19,29 @@
         h1, h2, h3 {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
-            margin-top: 39px;
-            margin-bottom: 13px;
-        }
-
-        p {
-            margin: 7px 0;
         }
 
         h1 {
-            font-size: 4em;
+            font-size: 64px;
+            line-height: 64px;
+            padding: 7px 0;
         }
 
         h2 {
-            font-size: 1.5em;
+            font-size: 24px;
+            line-height: 39px;
+            padding: 6px 0;
+        }
+
+        p {
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+        p:first-child {
+            margin-top: 0;
+        }
+        p:last-child {
+            margin-bottom: 0;
         }
 
         a {
@@ -40,27 +49,39 @@
             text-decoration: none;
             border-bottom: 1px solid rgba(0,96,160,.2);
         }
-
         a:hover {
             color: #d04000;
             border-bottom-color: rgba(208,64,0,.2);
         }
 
         .item {
-            font-size: 1.125em;
+            font-size: 18px;
         }
 
-        #container {
-            margin: 64px 24px;
-            margin-bottom: 130px;
+        .site-container {
+            margin: 78px 25px 130px 25px;
+            max-width: 1000px;
         }
 
-        @media (min-width: 640px) {
-            #container {
-                position: absolute;
-                left: 55%;
-                width: 400px;
+        .site-sections {
+            margin-top: 26px;    
+        }
+
+        @media (min-width: 1000px) {
+            .site-sections {
+                display: flex;
             }
+            .site-sections__section {
+                margin-right: 25px;
+                flex: 1;
+            }
+            .site-sections__section:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .site-section__links {
+            margin-bottom: 26px;
         }
     </style>
 
@@ -73,9 +94,9 @@
 
         if (!isMobile()) {
             window.addEventListener('mousemove', function (e) {
-                var x = e.clientX / window.innerWidth * 100;
-                var y = (e.clientY / window.innerHeight) * 360;
-                document.body.style.backgroundColor = 'hsl(' + y + ', ' + x + '%, 80%)';
+                var x = (e.clientX / window.innerWidth) * 360;
+                var y = (1 - e.clientY / window.innerHeight) * 100;
+                document.body.style.backgroundColor = 'hsl(' + x + ', ' + y + '%, 80%)';
             });
         }
     </script>
@@ -83,57 +104,68 @@
 
 <body>
 
-    <div id="container">
-        <h1>olezhe's</h1>
+    <div class="site-container">
+        <h1 class="site-title">Сайты Олежи</h1>
 
-        <h2>Кто я</h2>
-        <p>
-            <a class="item" href="//oleg.rocks">резюме</a>
-        </p>
+        <div class="site-sections">
+            <section class="site-sections__section site-section">
+                <h2 class="site-section__title">Кто я</h2 class="site-section__title">
+                <div class="site-section__links">
+                    <p>
+                        <a class="item" href="//oleg.rocks">резюме</a>
+                    </p>
+                </div>
 
-        <h2>Инфо</h2>
-        <p>
-            <a class="item" href="//instagram.com/reo7sp">инста</a> — фоточки.
-        </p>
-        <p>
-            <a class="item" href="//key.olezh.es">key.</a> — ссш-ключ.
-        </p>
-
-        <h2>Шеринг из керинг</h2>
-        <p>
-            <a class="item" href="//tells.olezh.es">tells.</a> — хорошие ссылки.
-        </p>
-        <p>
-            <a class="item" href="//writes.olezh.es">writes.</a> — учусь писать. эксперимент в прямом эфире.
-        </p>
-        <p>
-            <a class="item" href="//techment.olezh.es">techment.</a> — список факапов и не только. как руководить командой.
-        </p>
-
-        <h2>Сервисы</h2>
-        <p>
-            <a class="item" href="//drop.olezh.es">drop.</a> — скинуть длинную ссылку гугл презы на преподский комп.
-        </p>
-        <p>
-            <a class="item" href="//reo7sp.github.io/vk-channelify/">vk-channelify</a> — пересылать новости из вк группы в тг канал.
-        </p>
-        <p>
-            <a class="item" href="//jupyter.olezh.es">jupyter.</a>
-        </p>
-        <p>
-            <span class="item">proxy.</span>
-        </p>
-        <p>
-            <span class="item">vpn.</span>
-        </p>
-
-        <h2>Опенсорс</h2>
-        <p>
-            <a class="item" href="https://github.com/reo7sp/tgbot-cpp">tgbot-cpp</a> — библиотека для тг ботов на с++.
-        </p>
-        <p>
-            <a class="item" href="https://github.com/ktsstudio/kts_linguistics">kts_linguistics</a> — умеет исправлять опечатки и обрабатывать текст.
-        </p>
+                <h2 class="site-section__title">Инфо</h2 class="site-section__title">
+                <div class="site-section__links">
+                    <p>
+                        <a class="item" href="//instagram.com/reo7sp">инста</a> — фоточки.
+                    </p>
+                    <p>
+                        <a class="item" href="//key.olezh.es">key.</a> — ссш-ключ.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="site-sections__section site-section">
+                <h2 class="site-section__title">Шеринг из керинг</h2 class="site-section__title">
+                <div class="site-section__links">
+                    <p>
+                        <a class="item" href="//tells.olezh.es">tells.</a> — хорошие ссылки.
+                    </p>
+                    <p>
+                        <a class="item" href="//writes.olezh.es">writes.</a> — учусь писать. эксперимент в прямом эфире.
+                    </p>
+                    <p>
+                        <a class="item" href="//techment.olezh.es">techment.</a> — список факапов и не только. как руководить командой.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="site-sections__section site-section">
+                <h2 class="site-section__title">Сервисы</h2 class="site-section__title">
+                <div class="site-section__links">
+                    <p>
+                        <a class="item" href="//drop.olezh.es">drop.</a> — скинуть длинную ссылку гугл презы на преподский комп.
+                    </p>
+                    <p>
+                        <a class="item" href="//reo7sp.github.io/vk-channelify/">vk-channelify</a> — пересылать новости из вк группы в тг канал.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="site-sections__section site-section">
+                <h2 class="site-section__title">Опенсорс</h2 class="site-section__title">
+                <div class="site-section__links">
+                    <p>
+                        <a class="item" href="https://github.com/reo7sp/tgbot-cpp">tgbot-cpp</a> — библиотека для тг ботов на с++.
+                    </p>
+                    <p>
+                        <a class="item" href="https://github.com/ktsstudio/kts_linguistics">kts_linguistics</a> — умеет исправлять опечатки и обрабатывать текст.
+                    </p>
+                </div>
+            </section>
+        </div>
     </div>
 
 <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter49214629 = new Ya.Metrika2({ id:49214629, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/49214629" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
