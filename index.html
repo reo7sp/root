@@ -60,23 +60,19 @@
 
         .site-container {
             margin: 78px 25px 130px 25px;
-            max-width: 1000px;
+            max-width: 1100px;
         }
 
         .site-sections {
             margin-top: 26px;
         }
 
-        @media (min-width: 1000px) {
+        @media (min-width: 1100px) {
             .site-sections {
                 display: flex;
             }
             .site-sections__section {
-                margin-right: 25px;
                 flex: 1;
-            }
-            .site-sections__section:last-child {
-                margin-right: 0;
             }
         }
 
@@ -95,8 +91,8 @@
         if (!isMobile()) {
             window.addEventListener('mousemove', function (e) {
                 var x = (e.clientX / window.innerWidth) * 360;
-                var y = (1 - e.clientY / window.innerHeight) * 100;
-                document.body.style.backgroundColor = 'hsl(' + x + ', ' + y + '%, 80%)';
+                var y = (1 - e.clientY / window.innerHeight) * 70 + 30;
+                document.body.style.backgroundColor = 'hsl(' + x + ', ' + y + '%, 85%)';
             });
         }
     </script>
@@ -151,17 +147,32 @@
                     <p>
                         <a class="item" href="//techment.olezh.es">techment.</a> — список факапов и не только. как руководить командой.
                     </p>
+                    <p>
+                        <a class="item" href="https://github.com/reo7sp?utf8=%E2%9C%93&tab=repositories&q=technopark-&type=&language=">technopark-*</a> — все домашки технопарка mail.ru.
+                    </p>
                 </div>
             </section>
 
             <section class="site-sections__section site-section">
-                <h2 class="site-section__title">Опенсорс</h2 class="site-section__title">
+                <h2 class="site-section__title">Тулзы</h2 class="site-section__title">
                 <div class="site-section__links">
                     <p>
-                    <a class="item" href="https://github.com/reo7sp/tgbot-cpp">tgbot-cpp</a> — библиотека для тг ботов на с++. <svg aria-label="stars" height="18" role="img" version="1.1" viewBox="0 -4 14 18" width="14"><path stroke="black" fill="none" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>160+
+                        <a class="item" href="https://github.com/reo7sp/dotfiles">dotfiles</a> — конфиги zsh и vim, которые я использую каждый день. <svg aria-label="stars" height="18" role="img" version="1.1" viewBox="0 -4 14 18" width="14"><path stroke="black" fill="none" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>2+
                     </p>
                     <p>
-                    <a class="item" href="https://github.com/ktsstudio/kts_linguistics">kts_linguistics</a> — умеет исправлять опечатки и обрабатывать текст. <svg aria-label="stars" height="18" role="img" version="1.1" viewBox="0 -4 14 18" width="14"><path stroke="black" fill="none" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>15+
+                        <a class="item" href="https://github.com/reo7sp/baumanki-net-tools">baumanki-net-tools</a> — выкачать ботву c бауманки.нет. <svg aria-label="stars" height="18" role="img" version="1.1" viewBox="0 -4 14 18" width="14"><path stroke="black" fill="none" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>4+
+                    </p>
+                </div>
+            </section>
+
+            <section class="site-sections__section site-section">
+                <h2 class="site-section__title">Либы</h2 class="site-section__title">
+                <div class="site-section__links">
+                    <p>
+                        <a class="item" href="https://github.com/reo7sp/tgbot-cpp">tgbot-cpp</a> — библиотека для тг ботов на с++. <svg aria-label="stars" height="18" role="img" version="1.1" viewBox="0 -4 14 18" width="14"><path stroke="black" fill="none" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>160+
+                    </p>
+                    <p>
+                        <a class="item" href="https://github.com/ktsstudio/kts_linguistics">kts_linguistics</a> — умеет исправлять опечатки и обрабатывать текст. <svg aria-label="stars" height="18" role="img" version="1.1" viewBox="0 -4 14 18" width="14"><path stroke="black" fill="none" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>15+
                     </p>
                 </div>
             </section>
